@@ -1,5 +1,5 @@
-import ExpenseItem from './components/ExpenseItem'
-import Expenses from './components/Expenses';
+import ExpenseItem from './components/Expenses/ExpenseItem'
+import Expenses from './components/Expenses/Expenses';
 
 function App() {
   const expenses = [
@@ -17,7 +17,7 @@ function App() {
       date: new Date(2021, 2, 28),
     },
     {
-      id: 'e4',
+      id: 'e4', 
       title: 'New Desk (Wooden)',
       amount: 450,
       date: new Date(2021, 5, 12),
