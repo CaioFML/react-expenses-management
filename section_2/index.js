@@ -52,31 +52,56 @@ person.printGender()
 
 // 16. Classes, properties and methods
 
-// class Human {
-//   gender = 'Male';
+class Human2 {
+  gender = 'Male';
 
-//   printGender = () => {
-//     console.log(this.gender)
-//   }
-// }
+  printGender = () => {
+    console.log(this.gender)
+  }
+}
 
-// class Person extends Human {
-//   name = 'Person';
+class Person2 extends Human2 {
+  name = 'Person';
 
-//   printMyName = () => {
-//     console.log(this.name)
-//   }
-// }
+  printMyName = () => {
+    console.log(this.name)
+  }
+}
 
-// const person = new Person()
-// person.printMyName()
-// person.printGender()
+const person3 = new Person2()
+person3.printMyName()
+person3.printGender()
 
 // 17. The Spread & Rest Operator
 
+const numbers = [1, 2, 3]
+const newNumbers = [...numbers, 4]
 
+console.log(newNumbers)
+
+const person2 = {
+  name: 'Max'
+}
+
+const newPerson = {
+  ...person2,
+  age: 28
+}
+
+console.log(newPerson)
+
+const filter = (...args) => {
+  return args.filter(el => el === 1)
+}
+
+console.log(filter(1, 2, 3))
 
 // 18. Destructuring
+
+const numbers2 = [1, 2, 3]
+[num1, num2] = numbers
+
+console.log(num1, num2)
 
 // 19. Reference and Primitive Types Refresher
 
