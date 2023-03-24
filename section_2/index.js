@@ -98,11 +98,21 @@ console.log(filter(1, 2, 3))
 
 // 18. Destructuring
 
-const numbers2 = [1, 2, 3]
-[num1, num2] = numbers
+// const numbers2 = [1, 2, 3]
+// [num1, num2] = numbers
 
-console.log(num1, num2)
+// console.log(num1, num2)
 
 // 19. Reference and Primitive Types Refresher
 
 // 20. Refreshing Array methods
+
+function transformToObjects(numberArray) {
+  return numberArray.map((number) => {
+      return ({ val: number })
+  })
+}
+
+const numbers4 = [1, 2, 3]
+
+console.log(transformToObjects(numbers4))
