@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef, useImperativeHandle } from "react";
 
-import classes from "./Input.module.css";
+import classes from '../../Login/Login.module.css'
 
-const Inputs = props => {
+const Input = React.forwardRef((props, ref) => {
+  const inputRef = useRef()
+
+  const activate = () => {
+    inputRef.current.focus()
+  }
+
+  useImperativeHandle(ref, () => {
+    return {
+      focus: activate
+    }
+  })
+
   return (
     <div
       className={`${classes.control} ${
@@ -19,6 +31,6 @@ const Inputs = props => {
       />
     </div>
   )
-}
+})
 
 export default Input
