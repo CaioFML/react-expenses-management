@@ -12,9 +12,9 @@ const useHttp = (requestConfig, applyData) => {
       const response = await fetch(
         requestConfig.url,
         {
-          method: requestConfig.method,
-          body: JSON.stringify({ text: taskText }),
-          headers: requestConfig.headers,
+          method: requestConfig.method || 'GET',
+          body: JSON.stringify({ text: taskText }) || null,
+          headers: requestConfig.headers || {},
         }
       );
 
