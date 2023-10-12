@@ -20,7 +20,7 @@ function EventsNavigation() {
               All Events
             </NavLink>
           </li>
-          
+
           {token && <li>
             <NavLink
               to="/events/new"
