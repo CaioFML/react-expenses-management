@@ -8,15 +8,10 @@ import ErrorBlock from '../UI/ErrorBlock.jsx';
 export default function EventForm({ inputData, onSubmit, children }) {
   const [selectedImage, setSelectedImage] = useState(inputData?.image);
 
-  const { data, isPending, isError, error } = useQuery({
-    queryKey: 'selectableImages',
+  const { data, isPending, isError } = useQuery({
+    queryKey: ['events-images'],
     queryFn: fetchSelectableImages,
-    onSuccess: (data) => {
-      if (!selectedImage && data.length > 0) {
-        setSelectedImage(data[0]);
-      }
-    },
-  })
+  });
 
   function handleSelectImage(image) {
     setSelectedImage(image);
@@ -43,16 +38,21 @@ export default function EventForm({ inputData, onSubmit, children }) {
         />
       </p>
 
-      {isPending && <p>Loading images...</p>}
-      {isError && <ErrorBlock title="An error occurred" message={error.info?.message || 'Failed to load images'} />}
+      {isPending && <p>Loading selectable images...</p>}
+      {isError && (
+        <ErrorBlock
+          title="Failed to load selectable images"
+          message="Please try again later."
+        />
+      )}
       {data && (
         <div className="control">
-        <ImagePicker
-          images={data}
-          onSelect={handleSelectImage}
-          selectedImage={selectedImage}
-        />
-      </div>
+          <ImagePicker
+            images={data}
+            onSelect={handleSelectImage}
+            selectedImage={selectedImage}
+          />
+        </div>
       )}
 
       <p className="control">
