@@ -12,8 +12,6 @@ async function Meals() {
 }
 
 export default function MealsPage() {
-
-
   return (
     <>
       <header className={classes.header}>
