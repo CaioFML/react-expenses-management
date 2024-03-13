@@ -22,6 +22,8 @@ export default function ImagePicker({ label, name }) {
         setPickedImage(reader.result);
       };
       reader.readAsDataURL(file);
+    } else {
+      setPickedImage(null);
     }
   }
 
@@ -33,7 +35,7 @@ export default function ImagePicker({ label, name }) {
           {!pickedImage && <p>No image picked yet.</p>}
           {pickedImage && <Image src={pickedImage} alt="Picked image by user" fill />}
         </div>
-        <input className={classes.input} type="file" id={name} accept="image/png, image/jpeg" name={name} ref={imageInput} onChange={handleImageChange} />
+        <input className={classes.input} type="file" id={name} accept="image/png, image/jpeg" name={name} ref={imageInput} onChange={handleImageChange} required />
         <button className={classes.button} type="button" onClick={handlePickImage}>Pick an image</button>
       </div>
     </div>
