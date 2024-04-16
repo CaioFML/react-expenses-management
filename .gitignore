@@ -7,6 +7,8 @@ section_3_and_4/node_modules
 section_x/node_modules
 /.pnp
 .pnp.js
+.next
+*/.next
 
 # testing
 /coverage
