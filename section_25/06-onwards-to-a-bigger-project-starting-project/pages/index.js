@@ -4,14 +4,14 @@ const DUMMY_MEETUPS = [
   {
     id: 'm1',
     title: 'A First Meetup',
-    image: 'https://www.thespruceeats.com/thmb/5dJvJ9QsRqQV0yFJjJzWJY6b9a4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1197840992-5c8f7f7f46e0fb0001f8a6d0.jpg',
+    image: 'https://i0.wp.com/landlopers.com/wp-content/uploads/2016/08/Schloss-Hof-Austria.jpg?resize=1044%2C762&ssl=1',
     address: 'Some address 5, 12345 Some City',
     description: 'This is a first meetup!'
   },
   {
     id: 'm2',
     title: 'A Second Meetup',
-    image: 'https://www.thespruceeats.com/thmb/5dJvJ9QsRqQV0yFJjJzWJY6b9a4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1197840992-5c8f7f7f46e0fb0001f8a6d0.jpg',
+    image: 'https://i0.wp.com/landlopers.com/wp-content/uploads/2016/08/Schloss-Hof-Austria.jpg?resize=1044%2C762&ssl=1',
     address: 'Some address 10, 12345 Some City',
     description: 'This is a second meetup!'
   }
