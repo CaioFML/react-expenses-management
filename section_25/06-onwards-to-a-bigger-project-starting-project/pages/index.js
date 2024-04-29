@@ -20,10 +20,22 @@ const DUMMY_MEETUPS = [
 export default function Home({ meetups }) {
   return (
     <>
-      <MeetUpList meetups={loadedMeetups} />
+      <MeetUpList meetups={meetups} />
     </>
   );
 }
+
+// export async function getServerSideProps(context) {
+//   const req = context.req
+//   const res = context.res
+
+//   // fetch data from an API
+//   return {
+//     props: {
+//       meetups: DUMMY_MEETUPS
+//     }
+//   };
+// }
 
 export function getStaticProps() {
   return {
