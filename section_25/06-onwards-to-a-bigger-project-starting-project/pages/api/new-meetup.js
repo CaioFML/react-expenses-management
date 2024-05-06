@@ -1,3 +1,5 @@
+import { MongoClient } from 'mongodb';
+
 // /api/new-meetup
 
 export default handler(req, res) {
@@ -15,6 +17,12 @@ export default handler(req, res) {
     };
 
     // store it in a database
+    // const client = await MongoClient.connect('')
+    // const db = client.db();
+    // const meetupCollection = db.collection('meetups');
+    // const result = await meetupCollection.insertOne(newMeetup);
+    // client.close();
+
     console.log(newMeetup);
 
     res.status(201).json({ message: 'Meetup created!', meetup: newMeetup });
