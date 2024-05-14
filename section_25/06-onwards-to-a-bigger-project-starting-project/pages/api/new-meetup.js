@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 
 // /api/new-meetup
 
-export default handler(req, res) {
+export default function handler(req, res) {
   if (req.method === 'POST') {
     const data = req.body;
 
@@ -27,4 +27,4 @@ export default handler(req, res) {
 
     res.status(201).json({ message: 'Meetup created!', meetup: newMeetup });
   }
-}
+};
